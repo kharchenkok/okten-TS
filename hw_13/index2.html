@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name/Value Pair Manager</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        input, button {
+            margin: 5px 0;
+            padding: 8px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            padding: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+        @media (max-width: 600px) {
+            body {
+                max-width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>Name/Value Pair Manager</h2>
+<input type="text" id="inputPair" placeholder="Enter name=value">
+<button onclick="addPair()">Add</button>
+<button onclick="sortByName()">Sort by Name</button>
+<button onclick="sortByValue()">Sort by Value</button>
+<button onclick="deleteSelected()">Delete</button>
+
+<ul id="pairList"></ul>
+
+<script>
+    let pairs = [];
+    
+    function addPair() {
+        const input = document.getElementById("inputPair").value.trim();
+        const regex = /^([a-zA-Z0-9]+)\s*=\s*([a-zA-Z0-9]+)$/;
+        const match = input.match(regex);
+        
+        if (!match) {
+            alert("Invalid format. Use: name=value with alphanumeric characters only.");
+            return;
+        }
+        
+        const name = match[1];
+        const value = match[2];
+        pairs.push({ name, value });
+        renderList();
+    }
+    
+    function renderList() {
+        const list = document.getElementById("pairList");
+        list.innerHTML = "";
+        pairs.forEach((pair, index) => {
+            const li = document.createElement("li");
+            li.innerHTML = `<input type='checkbox' data-index='${index}'> ${pair.name} = ${pair.value}`;
+            list.appendChild(li);
+        });
+    }
+    
+    function sortByName() {
+        pairs.sort((a, b) => a.name.localeCompare(b.name));
+        renderList();
+    }
+    
+    function sortByValue() {
+        pairs.sort((a, b) => a.value.localeCompare(b.value));
+        renderList();
+    }
+    
+    function deleteSelected() {
+        const checkboxes = document.querySelectorAll("input[type='checkbox']:checked");
+        const indexesToRemove = Array.from(checkboxes).map(cb => parseInt(cb.dataset.index));
+        pairs = pairs.filter((_, index) => !indexesToRemove.includes(index));
+        renderList();
+    }
+</script>
+</body>
+</html>

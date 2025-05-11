@@ -1,0 +1,27 @@
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.product-card{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+}
+
+.product-image{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 1;
+}
+
+.product-title::first-letter{
+    text-transform: uppercase;
+}

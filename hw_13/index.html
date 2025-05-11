@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name/Value Pair Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Name/Value Pair Manager</h1>
+        
+        <div class="input-section">
+            <input type="text" id="pairInput" placeholder="Enter name = value" class="pair-input">
+            <button onclick="addPair()" class="add-btn">Add</button>
+        </div>
+
+        <div class="controls">
+            <button onclick="sortByName()" class="sort-btn">Sort by Name</button>
+            <button onclick="sortByValue()" class="sort-btn">Sort by Value</button>
+            <button onclick="deleteSelected()" class="delete-btn">Delete</button>
+        </div>
+
+        <div class="list-container">
+            <div id="pairsList" class="pairs-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+.users-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.user-block{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.user-block h2{
+    margin: 0;
+    color: teal;
+}
+
+.user-block a{
+    padding: 5px 0;
+    margin: 0;
+    color: darksalmon;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.user-block a:hover,
+.user-block a:focus{
+    color: #cf552d;
+   }
+.address-block{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}

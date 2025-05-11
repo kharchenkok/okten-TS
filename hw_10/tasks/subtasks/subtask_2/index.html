@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../../../styles-tasks.css" rel="stylesheet">
+    <style>
+        .wrapper{
+            margin: 0 auto;
+            width: fit-content;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+            position: relative
+
+        }
+        .wrapper .btn{
+            margin:0;
+        }
+        
+        .wrapper .info{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            font-size: 16px;
+            color: #b92222;
+
+        }
+        input{
+            width: 200px;
+            
+            padding: 10px 20px;
+            font-size: 16px;
+            line-height: 25px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+       
+    </style>
+</head>
+<body>
+<a class="btn" href="../../index.html">Back</a>
+<div class="container">
+    <div class="wrapper">
+        <label>
+            <input type="number" name="userAge" id="userAge" placeholder="Enter your age">
+        </label>
+        <button class="btn" id="submit" type="button">Submit</button>
+    </div>
+</div>
+
+<script src="main.js" type="module"></script>
+</body>
+</html>

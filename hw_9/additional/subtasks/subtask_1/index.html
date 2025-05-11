@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="../../../../styles-tasks.css" rel="stylesheet">
+    <style>
+      
+        .courses-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            font-size: 22px;
+        }
+        .course-item{
+            padding: 20px 40px;
+            display: flex;
+            gap: 15px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+        }
+        .course-item .title{
+            margin: 0;
+            font-size: 38px;
+            color: teal;
+            text-align: center;
+        }
+        
+        
+        .duration {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        
+        .duration p{
+            position: relative;
+        }
+        
+        .duration p:not(:last-child)::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: -5px;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background-color: #ccc;
+        }
+        
+        .course-item-modules{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 5px 10px;
+            width: 100%;
+            align-content: space-between;
+        }
+        .course-item-modules li{
+            padding: 4px 10px;
+            flex-shrink: 1;
+            background-color: rgba(204, 204, 204, 0.75);
+            border-radius: 12px;
+         }
+    </style>
+</head>
+<body>
+<a class="btn" href="../../index.html">Back</a>
+<div class="container"></div>
+
+<script src="main.js" type="module" ></script>
+</body>
+</html>

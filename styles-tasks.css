@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+
+body {
+    font-size: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 50px;
+    color: darkgrey;
+}
+
+
+
+.btn {
+    padding: 10px 20px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 20px;
+    border: 2px solid teal;
+    border-radius: 16px;
+    color: teal;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: teal;
+    color: white;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 40px 80px;
+    width: 100%;
+    max-width: 1440px;
+
+}
+
+.card-set{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    counter-reset: item;
+}
+
+.card-item{
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.card-item::before{
+    content: counter(item) ". ";
+    counter-increment: item;
+    min-width: 25px;
+}
+
+.card-item p::first-letter{
+    text-transform: uppercase;
+}
+
+.card-item .btn{
+    margin-top: 0;
+    min-width: fit-content;
+}
+
+
+
