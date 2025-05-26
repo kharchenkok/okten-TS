@@ -1,4 +1,28 @@
-let usersList = [
+interface User2_1{
+    id: number;
+    name: string;
+    username: string;
+    email: string;
+    address: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: string;
+        geo: {
+            lat: string;
+            lng: string;
+        };
+    };
+    phone: string;
+    website: string;
+    company: {
+        name: string;
+        catchPhrase: string;
+        bs: string;
+    };
+}
+
+let usersList:User2_1[] = [
     {
         id: 1,
         name: 'Leanne Graham',

@@ -1,4 +1,4 @@
-let textsArr=[
+let textsArr:string[]=[
     "Не рахуй дні, роби так, щоб дні мали значення. – Мухаммед Алі",
     "Єдиний спосіб зробити щось добре – любити те, що робиш. – Стів Джобс",
     "Щастя – це не щось готове. Воно походить від твоїх власних дій. – Далай-лама",
@@ -22,10 +22,11 @@ let textsArr=[
 ]
 
 document.write('<div class="container">');
-for (let i = 0; i < 10; i += 1) {
-    let randomText = textsArr[Math.floor(Math.random() * textsArr.length)];
+for (let i:number = 0; i < 10; i += 1) {
+    let randomText:string = textsArr[Math.floor(Math.random() * textsArr.length)];
     document.write(`<div style="padding: 10px; margin: 5px; max-width: fit-content; background-color: lightblue; border-radius: 5px;">
-                    ${randomText} <span>(index - ${i})</span>  
+                        ${randomText}
                     </div>`);
 }
+
 document.write('</div>');

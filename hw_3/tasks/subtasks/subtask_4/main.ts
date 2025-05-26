@@ -1,4 +1,5 @@
-let textsArr=[
+
+let textsArr4:string[]=[
     "OKTEN - школа програмування",
     "2900 студентів",
     "2500+ працевлаштованих студентів",
@@ -8,14 +9,14 @@ let textsArr=[
     "підтверджена якість"
 ]
 
-let counter = 0;
+let counter_4:number = 0;
 document.write('<div class="container">');
-while (counter < 20){
+while (counter_4 < 20){
 
-    let randomText = textsArr[Math.floor(Math.random() * textsArr.length)];
+    let randomText = textsArr4[Math.floor(Math.random() * textsArr4.length)];
     document.write(`<h1 style="margin-bottom:20px; color: teal;">
-                    ${randomText}   
+                    ${randomText}<span>(index - ${counter_4})</span>  
                     </h1>`);
-    counter += 1;
+    counter_4 += 1;
 }
 document.write('</div>');

@@ -1,4 +1,11 @@
-const postsList=[
+interface Post{
+    userId: number;
+    id: number;
+    title: string;
+    body: string;
+}
+
+const postsList:Post[]=[
     {
         userId: 1,
         id: 1,

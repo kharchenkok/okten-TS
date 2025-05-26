@@ -1,4 +1,10 @@
-let products = [
+interface Product {
+    title: string;
+    price: number;
+    image: string;
+}
+
+let products:Product[] = [
     {
         title: 'milk',
         price: 22,
@@ -18,7 +24,6 @@ let products = [
         title: 'tea',
         price: 15,
         image: 'https://us-east-1-shared-usea1-02.graphassets.com/A2lCPH6tTelhrsostvMQpz/auto_image/resize=fit:max,width:640/quality=value:75/AQ3HZHQ3RC2BzstBoUdV'
-        // image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
     },
 ];
 
